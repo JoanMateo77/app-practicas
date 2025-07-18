@@ -4,7 +4,7 @@ import Image from "next/image";  // reglas de next js que establecera minimas pa
 import Link from "next/link"; //regalas pero ahora con link 
 
 
-type ProductProps = {
+type Product = {
     id : string;
     name : string;
     price: number;
@@ -12,20 +12,20 @@ type ProductProps = {
     description: string;
 };
 
-export default function ProductCard ({id, name, price, image, description}:ProductProps) {
+export default function ProductCard ({product}:{product:Product}) {
     return (
         <div className="rounded-xl border border-gray-200 bg-white shadow-md p-4 space-y-2 hover:shadow-lg transition">
-            <Image src={image} 
-            alt={name}
+            <Image src={product.image} 
+            alt={product.name}
             width={400}
             height={300}
             className="rounded-md object-cover w-full h-52"
             />
-            <h2 className="text-lg font-semibold text-gray-900 ">{name}</h2>
-            <p className="text-sm text-gray-500 ">{description}</p>
-            <p className="text-indigo-600 font-bold text-lg ">${price.toLocaleString()}</p>
+            <h2 className="text-lg font-semibold text-gray-900 ">{product.name}</h2>
+            <p className="text-sm text-gray-500 ">{product.description}</p>
+            <p className="text-indigo-600 font-bold text-lg ">${product.price.toLocaleString()}</p>
 
-            <Link href={`/product/${id}`} 
+            <Link href={`/product/${product.id}`} 
             className="inline-block text-sm text-indigo-600 hover:underline ">
                 Ver Detalles 
             </Link>
