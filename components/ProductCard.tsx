@@ -4,6 +4,7 @@ import Image from "next/image";  // reglas de next js que establecera minimas pa
 import Link from "next/link"; //regalas pero ahora con link 
 
 
+
 type Product = {
     id : string;
     name : string;

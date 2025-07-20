@@ -22,7 +22,7 @@ export default function HomePage() {
 
         {/* CTA */}
         <Link
-          href="/"
+          href={"/products/"} 
           className="
             inline-block rounded-lg bg-indigo-600 px-6 py-3
             font-semibold text-white transition-colors
