@@ -20,7 +20,7 @@ export default function ProductCard ({product}:{product:Product}) {
             alt={product.name}
             width={400}
             height={300}
-            className="rounded-md object-cover w-full h-52"
+            className="rounded-md object-cover w-full h-62"
             />
             <h2 className="text-lg font-semibold text-gray-900 ">{product.name}</h2>
             <p className="text-sm text-gray-500 ">{product.description}</p>
